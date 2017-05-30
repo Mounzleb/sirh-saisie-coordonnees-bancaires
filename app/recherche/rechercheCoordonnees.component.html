@@ -1,0 +1,59 @@
+
+    <form class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Recherche</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="searchNomPrenom">Rechercher
+                    un nom ou un prénom qui commence par: </label>
+                <div class="col-md-2">
+                    <input id="searchNomPrenom" name="searchNomPrenom" type="text" placeholder="" class="form-control input-md">
+
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="depSearch">Filtrer
+                    par département :</label>
+                <div class="col-md-2">
+                    <select id="depSearch" name="depSearch" class="form-control">
+
+                        <option value="0">Tous</option>
+
+                        <c:forEach var="dept" items="${ departements }">
+
+                            <option value="${ dept.id }">${ dept.nom }</option>
+
+                        </c:forEach>
+
+                    </select>
+                </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="checkboxes">Voir
+                    les collaborateurs désactivé :</label>
+                <div class="col-md-4">
+                    <label class="checkbox-inline" for="checkboxes-0"> <input
+                        type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+
+                    </label>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="search"></label>
+                <div class="col-md-4">
+                    <button id="search" name="search" class="btn btn-primary">Rechercher</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+>
